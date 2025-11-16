@@ -1,7 +1,8 @@
 <script>
 	import { slide } from 'svelte/transition';
 	const announcementItemClasses =
-		'flex cursor-pointer items-center justify-between border-b border-anthropic-darkbrown py-8'; let showMenu = $state(false);
+		'flex cursor-pointer items-center justify-between border-b border-anthropic-darkbrown py-8';
+	let showMenu = $state(false);
 </script>
 
 {#snippet arrowRight()}
@@ -69,9 +70,9 @@
 </header>
 
 <!-- Hero Section -->
-<section class="max-w-8xl mx-4 px-4 py-12 sm:px-6 md:mx-24 md:py-24 lg:px-2">
-	<div class="flex flex-col-reverse items-center gap-4 md:flex-row">
-		<div>
+<section class="max-w-8xl mx-4 px-4 py-12 sm:px-6 md:py-24 lg:mx-24 lg:px-2">
+	<div class="flex flex-col-reverse items-center md:flex-row md:justify-center lg:gap-18 xl:gap-36">
+		<div class="md:w-1/2">
 			<h1 class="font-montserrat text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
 				AI <span class="underline decoration-4">research</span> and
 				<span class="underline decoration-4">products</span> that put safety at the frontier
@@ -81,7 +82,7 @@
 				to securing its benefits and mitigating its risks.
 			</p>
 		</div>
-		<div class="flex justify-center lg:justify-end">
+		<div class="flex w-fit justify-center lg:justify-end">
 			<!-- Placeholder for hand with data tree illustration -->
 			<img
 				src="/handIllustration.svg"
@@ -136,7 +137,10 @@
 				class="relative flex items-center justify-center overflow-hidden rounded-3xl bg-anthropic-brown"
 			>
 				<img
-					src="/readingthemindofanai.webp"
+					srcset="/readingthemindofanai-400w.png,
+                    /readingthemindofanai-510w.png,
+                    /readingthemindofanai-850w.png,
+                    /readingthemindofanai-1411w.png"
 					alt="Reading the mind of an AI"
 					class="h-full w-full"
 				/>
