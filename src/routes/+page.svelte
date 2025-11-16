@@ -1,6 +1,8 @@
 <script>
+	import { slide } from 'svelte/transition';
 	const announcementItemClasses =
 		'flex cursor-pointer items-center justify-between border-b border-anthropic-darkbrown py-8';
+	let showMenu = $state(false);
 </script>
 
 {#snippet arrowRight()}
@@ -34,7 +36,13 @@
 					Try Claude
 				</button>
 			</nav>
-			<button class="md:hidden">
+			<button
+				class="md:hidden"
+				onclick={() => {
+					console.log('clicked');
+					showMenu = !showMenu;
+				}}
+			>
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
 						stroke-linecap="round"
@@ -45,12 +53,25 @@
 				</svg>
 			</button>
 		</div>
+		<!-- Mobile menu -->
+		{#if showMenu}
+			<nav transition:slide class="flex flex-col space-y-4 pb-4 md:hidden">
+				<a href="#" class="hover:text-gray-600">Research</a>
+				<a href="#" class="hover:text-gray-600">Economic Futures</a>
+				<a href="#" class="hover:text-gray-600">Commitments</a>
+				<a href="#" class="hover:text-gray-600">Learn</a>
+				<a href="#" class="hover:text-gray-600">News</a>
+				<button class="text-md rounded-xl bg-black px-8 py-3 text-white hover:bg-gray-800">
+					Try Claude
+				</button>
+			</nav>
+		{/if}
 	</div>
 </header>
 
 <!-- Hero Section -->
 <section class="max-w-8xl mx-4 px-4 py-12 sm:px-6 md:mx-24 md:py-24 lg:px-2">
-	<div class="grid grid-cols-1 items-center gap-4 lg:grid-cols-2">
+	<div class="flex flex-col-reverse items-center gap-4 md:flex-row">
 		<div>
 			<h1 class="font-montserrat text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
 				AI <span class="underline decoration-4">research</span> and
