@@ -37,6 +37,7 @@
 				</button>
 			</nav>
 			<button
+				aria-label="Show menu"
 				class="md:hidden"
 				onclick={() => {
 					console.log('clicked');
@@ -147,6 +148,7 @@
 				/>
 
 				<button
+					aria-label="Play video"
 					class="absolute z-10 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110"
 				>
 					<svg class="ml-1 h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -388,21 +390,21 @@
 				<div class="mb-4 text-2xl font-bold md:mb-0">A\</div>
 				<div class="mb-4 text-sm text-gray-400 md:mb-0">© 2025 Anthropic PBC</div>
 				<div class="flex space-x-4">
-					<a href="#" class="text-gray-400 hover:text-white">
+					<a href="#" aria-label="Twitter link" class="text-gray-400 hover:text-white">
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
 							><path
 								d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
 							></path></svg
 						>
 					</a>
-					<a href="#" class="text-gray-400 hover:text-white">
+					<a href="#" aria-label="LinkedIn link" class="text-gray-400 hover:text-white">
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
 							><path
 								d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
 							></path><circle cx="4" cy="4" r="2"></circle></svg
 						>
 					</a>
-					<a href="#" class="text-gray-400 hover:text-white">
+					<a href="#" aria-label="Email link" class="text-gray-400 hover:text-white">
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
 							><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
 							></path><polyline points="22,6 12,13 2,6" fill="none" stroke="black" stroke-width="2"
