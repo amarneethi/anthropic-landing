@@ -85,6 +85,7 @@
 		<div class="flex w-fit justify-center lg:justify-end">
 			<!-- Placeholder for hand with data tree illustration -->
 			<img
+				fetchpriority="high"
 				src="/handIllustration.svg"
 				alt="Hand holding a data tree illustration"
 				class="w-80 md:w-md"
