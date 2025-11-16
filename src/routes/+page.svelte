@@ -1,8 +1,7 @@
 <script>
 	import { slide } from 'svelte/transition';
 	const announcementItemClasses =
-		'flex cursor-pointer items-center justify-between border-b border-anthropic-darkbrown py-8';
-	let showMenu = $state(false);
+		'flex cursor-pointer items-center justify-between border-b border-anthropic-darkbrown py-8'; let showMenu = $state(false);
 </script>
 
 {#snippet arrowRight()}
