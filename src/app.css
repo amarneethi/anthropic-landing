@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+	--font-montserrat: 'Montserrat', sans-serif;
+    --font-ephesis: 'Ephesis', cursive;
+	--color-anthropic-beige: rgba(241, 238, 231, 1);
+	--color-anthropic-brown: rgba(227, 218, 203, 1);
+	--color-anthropic-darkbrown: rgba(180, 170, 155, 1);
+	--color-anthropic-sage: #b8c9c3;
+	--color-anthropic-lavender: #d4d4e8;
+}
+
+body {
+	background-color: var(--color-anthropic-beige);
+	letter-spacing: 0.08em;
+}
